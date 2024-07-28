@@ -1,0 +1,44 @@
+name: Node.js CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+
+    runs-on: ubuntu-laType a short message on top of various messengers, kakaotalk, blogs, internet, etc.
+
+Experimental Shortening Word View
+DDay (May 1, 2021 to the present):1186Days
+Current to ~Dedays from specified days!
+CurrentTime:오전 01pm(01) 34Minutes 50seconds
+Current Date:2024year 07month 29th day 월Day of the week
+Current location:Please try again.
+Random numbers (1 to 50):16
+Pick one randomly:®
+There are more, so press ? in Modify/Add Shortcuts to look at more!
+
+Diverse Use Methods
+ Address: ***–ro **–ro **–gu, **–si, Gyeonggi–do ***
+Hashtag or Fixed Phrase: Hello, this is @@. #AutoComplete #Playstore #Best!
+ Special character emoticon: ゙((▽▽**)o
+Link: http://mcbekr.kr/
+ID: yeestudio123
+Email: yeeseong@kakao.com
+ Account number: 33–3333–33333 EX Bank
+ Game: Minecraft command, words often used in the game
+ Repeat phrase: Congratulations, contact, greetings, promotional phrase
+    strategy:
+      matrix:
+        node-version: [16.x]        
+# See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm install
+    - run: npm start
